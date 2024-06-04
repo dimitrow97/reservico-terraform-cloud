@@ -1,0 +1,11 @@
+sql_administrator_login                             = <login>
+sql_administrator_login_password                    = <password>
+connectionString_database                           = <connectionString_database>
+connectionString_blob                               = <connectionString_blob>
+emailConfig_Password                                = <emailConfig_Password>
+emailConfig_ApplicationUrl                          = <emailConfig_ApplicationUrl>
+emailConfig_PublicApplicationUrl                    = <emailConfig_PublicApplicationUrl>
+identityAuthConfig_TokenIssuer                      = <identityAuthConfig_TokenIssuer>
+identityAuthConfig_TokenSalt                        = <identityAuthConfig_TokenSalt>
+identityAuthConfig_ClientCredentials_ClientId       = <identityAuthConfig_ClientCredentials_ClientId>
+identityAuthConfig_ClientCredentials_ClientSecret   = <identityAuthConfig_ClientCredentials_ClientSecret>

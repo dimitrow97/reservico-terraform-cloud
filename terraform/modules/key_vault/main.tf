@@ -2,7 +2,7 @@ terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = "3.50"
+      version = "3.106.1"
     }
   }
 }
@@ -39,7 +39,7 @@ resource "azurerm_key_vault" "key_vault" {
     ]
 
     secret_permissions = [
-      "Get",
+      "Get", "Set", "List"
     ]
 
     storage_permissions = [

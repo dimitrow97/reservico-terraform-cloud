@@ -251,3 +251,125 @@ variable "nsg_whitelisted_ip_addresses" {
   description = "(Required) Specifies the list of whitelisted IP Addresses for the network security group"
   type        = list(string)
 }
+
+# SQL Server and SQL Database
+
+variable "sql_server_name" {
+  description = "(Required) Specifies the name of the sql server"
+  type        = string
+}
+
+variable "sql_database_name" {
+  description = "(Required) Specifies the name of the sql database"
+  type        = string
+}
+
+variable "sql_administrator_login" {
+  description = "(Required) Specifies the login for the admin account in the sql server"
+  type        = string
+}
+
+variable "sql_administrator_login_password" {
+  description = "(Required) Specifies the login password for the admin account in the sql server"
+  type        = string
+}
+
+# Service Plan
+
+variable "sp_name" {
+  description = "(Required) Specifies the name of the service plan"
+  type        = string
+}
+
+
+variable "sp_sku_name" {
+  description = "(Required) Specifies the sku name of the service plan"
+  type        = string
+  default     = "F1"
+}
+
+# User Assigned Identity
+
+variable "uai_name" {
+  description = "(Required) Specifies the name of the user assigned identity"
+  type        = string
+}
+
+# Windows .Net Web App
+
+variable "wdnwa_name" {
+  description = "(Required) Specifies the name of the web app"
+  type        = string
+}
+
+variable "aspnetcore_env" {
+  description = "(Required) Specifies the env variable used to get the correct appSettings.json file for the web app"
+  type        = string
+}
+
+# Windows NodeJS Web App
+
+variable "wnjwa_bo_name" {
+  description = "(Required) Specifies the name of the web app"
+  type        = string
+}
+
+variable "wnjwa_front_name" {
+  description = "(Required) Specifies the name of the web app"
+  type        = string
+}
+
+variable "wnjwa_public_name" {
+  description = "(Required) Specifies the name of the web app"
+  type        = string
+}
+# Windows .Net Web App KeyVault Secrets
+
+## Connection Strings
+variable "connectionString_database" {
+  description = "(Required) Specifies the connectionString for the database of the web app"
+  type        = string
+}
+
+variable "connectionString_blob" {
+  description = "(Required) Specifies the connectionString for the blob of the web app"
+  type        = string
+}
+
+## Email Config
+variable "emailConfig_Password" {
+  description = "(Required) Specifies the password for the email config of the web app"
+  type        = string
+}
+
+variable "emailConfig_ApplicationUrl" {
+  description = "(Required) Specifies the client app url for the email config of the web app"
+  type        = string
+}
+
+variable "emailConfig_PublicApplicationUrl" {
+  description = "(Required) Specifies the public app url for the email config of the web app"
+  type        = string
+}
+
+## Identity Authorization Config
+
+variable "identityAuthConfig_TokenIssuer" {
+  description = "(Required) Specifies the Token Issuer for the identity auth config of the web app"
+  type        = string
+}
+
+variable "identityAuthConfig_TokenSalt" {
+  description = "(Required) Specifies the Token Issuer for the identity auth config of the web app"
+  type        = string
+}
+
+variable "identityAuthConfig_ClientCredentials_ClientId" {
+  description = "(Required) Specifies the Client Id for the client credentials in the identity auth config of the web app"
+  type        = string
+}
+
+variable "identityAuthConfig_ClientCredentials_ClientSecret" {
+  description = "(Required) Specifies the Client Secret for the client credentials in the identity auth config of the web app"
+  type        = string
+}
